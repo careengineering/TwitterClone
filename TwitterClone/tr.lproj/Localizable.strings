@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  TwitterClone
+
+  Created by Çare C. on 2.04.2023.
+  
+*/
+"edit_profile" = "Profil Düzenle";
+"following" = "Takip Edilen";
+"follower" = "Takipçi";
+"tweets" = "Twitler";
+"replies" = "Cevaplar";
+"likes" = "Beğenilenler";
+"explore" = "Ara";
