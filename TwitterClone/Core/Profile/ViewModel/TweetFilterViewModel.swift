@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Localize_Swift
 
 enum TweetFilterViewModel: Int, CaseIterable {
     case tweets
@@ -14,9 +15,9 @@ enum TweetFilterViewModel: Int, CaseIterable {
     
     var title: String {
         switch self {
-        case .tweets: return "tweets"
-        case .replies: return "replies"
-        case .likes: return "likes"
+        case .tweets: return "tweets".localized()
+        case .replies: return "replies".localized()
+        case .likes: return "likes".localized()
         }
     }
 }

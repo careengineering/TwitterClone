@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Localize_Swift
 
 enum SideMenuViewModel: Int, CaseIterable {
     case profile
@@ -15,10 +16,10 @@ enum SideMenuViewModel: Int, CaseIterable {
     
     var title: String {
         switch self {
-        case .profile: return "profile"
-        case .lists: return "lists"
-        case .bookmarks: return "bookmarks"
-        case .logout: return "logout"
+        case .profile: return "profile".localized()
+        case .lists: return "lists".localized()
+        case .bookmarks: return "bookmarks".localized()
+        case .logout: return "logout".localized()
         }
     }
     
@@ -31,3 +32,5 @@ enum SideMenuViewModel: Int, CaseIterable {
         }
     }
 }
+
+
