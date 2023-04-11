@@ -11,6 +11,7 @@ import Localize_Swift
 struct CustomInputField: View {
     let imageName: String
     let placeHolderText: String
+    var isSecureField: Bool? = false
     
     @Binding var text: String
 
@@ -23,7 +24,12 @@ struct CustomInputField: View {
                     .frame(width: 20, height: 20)
                     .foregroundColor(Color(.darkGray))
                 
-                TextField(placeHolderText.localized(), text: $text)
+                if isSecureField ?? false {
+                    SecureField(placeHolderText.localized(), text: $text)
+                } else {
+                    TextField(placeHolderText.localized(), text: $text)
+                }
+                
             }
             Divider()
                 .background(Color(.darkGray))
@@ -35,6 +41,7 @@ struct CustomInputField_Previews: PreviewProvider {
     static var previews: some View {
         CustomInputField(imageName: "envelope",
                          placeHolderText: "Email",
+                         isSecureField: false,
                          text: .constant(""))
     }
 }
